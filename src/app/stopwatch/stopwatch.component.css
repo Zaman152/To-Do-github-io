@@ -1,0 +1,28 @@
+.stopwatch-box {
+    background-color: whitesmoke; /* Light gray background color */
+    padding: 10px; /* Add padding for spacing */
+    position: absolute;
+    top: 20px; /* Adjust top as needed to control vertical position */
+    right: 20px; /* Adjust right as needed to control horizontal position */
+    display: inline-block;
+    margin-top: 220px;
+    margin-right: 35px;
+  }
+  
+  .stopwatch-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .time {
+    font-size: 2em;
+    margin-bottom: 10px; /* Adjust margin-bottom as needed */
+  }
+  
+  .controls button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px;
+  }
+  

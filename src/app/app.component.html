@@ -1,0 +1,52 @@
+<h1 class="title">{{ title }}</h1>
+
+<div class="inline">
+  <input type="text" class="input" placeholder="Enter Task" [(ngModel)]="task" name="task" />
+
+  <button class="btnAdd" (click)="addTask(task)">Add Task</button>
+</div>
+<div>
+  <div class="sections">
+    <div class="sectionA">
+      <h2>
+        <button (click)="filterAll()" class="transparent-button">All</button>
+      </h2>
+      <ul>
+        <li *ngFor="let item of allTasks">
+          {{ item.name }}
+          <div class="action-button">
+            <button (click)="removeTask(item.id)" class="action-button">Remove</button>
+          </div>
+          <div class="action-button">
+            <button (click)="completedTask(item.id)" class="action-button">Completed</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="sectionP">
+      <h2>
+        <button (click)="filterPending()" class="transparent-button">Pending</button>
+      </h2>
+      <ul>
+        <li *ngFor="let item of pendingTasks">
+          {{ item.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="sectionC">
+      <h2>
+        <button (click)="filterCompleted()" class="transparent-button">Completed</button>
+      </h2>
+      <ul>
+        <li *ngFor="let item of completedTasks">
+          {{ item.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <app-stopwatch></app-stopwatch>
+</div>
+
+
